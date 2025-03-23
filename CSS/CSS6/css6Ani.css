@@ -1,0 +1,38 @@
+.box {
+    height: 100px;
+    width: 500px;
+    background-color: greenyellow;
+    animation-name: widthAnimate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes widthAnimate{
+    from{
+        width: 10px;
+        background-color: green;
+        
+    }
+    to{
+        width: 400px;
+        background-color: blue;
+        border-radius: 15px;
+    }
+}
+@keyframes fontAnimation {
+    from {
+        font-size: 20px;
+    }
+
+    to {
+        font-size: 40px;
+    }
+}
+@keyframes colorAnimate{
+    from{
+        background-color: green;
+    }
+    to{
+        background-color: aqua;
+    }
+}

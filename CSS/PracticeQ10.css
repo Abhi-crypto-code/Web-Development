@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+    text-decoration: wavy red underline;
+}
+h3{
+    text-align: right;
+    text-decoration: line-through;
+}
+p{
+    text-align: justify;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+    font-family: impact;
+}
