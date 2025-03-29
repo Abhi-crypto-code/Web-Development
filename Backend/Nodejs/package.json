@@ -8,5 +8,9 @@
   "author": "AbhishekGonnade",
   "license": "ISC",
   "description": "",
-  "type" : "module"
+  "type": "module",
+  "dependencies": {
+    "figlet": "^1.8.0",
+    "random-words": "^2.0.1"
+  }
 }

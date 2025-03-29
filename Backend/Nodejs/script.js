@@ -9,4 +9,6 @@
 // console.log(fruits);
 
 import {mul,PI} from "./math.js";
-console.log(PI);
+//console.log(PI);
+import { generate, count } from "random-words";
+console.log(generate());
