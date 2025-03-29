@@ -5,5 +5,5 @@
 // console.log(sumEx);
 // let div = value.div(2,1);
 // console.log(div);
-const fruits = require("Fruits");
+const fruits = require("F");
 console.log(fruits);
