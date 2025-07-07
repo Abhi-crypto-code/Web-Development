@@ -45,7 +45,7 @@ app.post("/chats", (req, res) => {
         .then((res) => {
             console.log(res);
         }).catch(err => console.log(err));
-    res.redirect("/chats")
+    res.redirect("/chats");
 });
 
 //edit
