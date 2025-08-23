@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-
+const ExpressError = require("./ExpressError");
 // app.use((req,res)=>{
 //     console.log("I am a middleware");
 //     res.redirect("/random");
@@ -45,7 +45,8 @@ const checkToken = (req,res,next)=>{
     }
     else{
         // res.send("ACCESS DENIED!");
-        throw new Error("ACCESS DENIED");
+        // throw new Error("ACCESS DENIED");
+        throw new ExpressError(401,"ACCESS DENIED");
     }
 };
 
@@ -61,6 +62,22 @@ app.get("/random",(req,res)=>{
     console.log("random path");
     res.send("random");
 });
+
+app.get("/admin",(req,res)=>{
+
+    throw new ExpressError(404,"ACCESS to ADMIN is denied");
+});
+
+
+app.use((err,req,res,next)=>{
+    console.log("----Error----");
+    // next(err);
+    // res.send(err);
+    let {status , message} = err;
+    res.status(status).send(message);
+});
+
+
 
 app.use((req,res)=>{
     res.status(404).send("Page not found");
